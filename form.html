@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+  <header style="background-color:firebrick ;">
+  <h1 style="color:yellow;">
+If you have time please fill out this form
+  </h1> 
+</header> 
+  <body style="background-color:powderblue;">
+
+<hr> 
+<h1>
+    <ul>
+      <li><a href="./index.html"> Home </a></li>
+      <li><a href="./someofmydrawings.html">Some Of My Drawings</a></li>
+      <li><a href="./contactme.html">Contact Me</a></li>
+      <li><a href="#">Form</a></li>
+  </ul>
+  </h1>
+  <hr>
+  <h2>
+    <main>
+      <script>
+      function showmyvalue(){
+        var retval = true ;
+      var age = document.getElementById("_pcage").value
+      
+      if (+age > 60) {
+ alert ("You are too old to use this website");
+ retval = false;
+  } 
+ return retval;
+ }    
+
+      </script>
+ <form action="./result.html" target="_blank" method="GET" onsubmit="return showmyvalue()">
+   <label for="_pcname1">Name</label>
+   <input type="text" name="pcname" id="_pcname1" placeholder="" required>
+   <br />
+   <label for="_pcage">Age</label>
+<input type="number" name="pcage" id="_pcage" min="1" max="100" required>
+<br />
+<label for="_pcpass">Password</label>
+<input type="password" name="pcpass" id="_pcpass" required>
+<br />
+<header style="color: black;">
+<label for="">Gender</label>
+</header>
+<input type="radio" id="male" name="gender" value="male" required>
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female" required>
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other" required>
+  <label for="other">Other</label>
+  <br />
+  <input type="submit" value="Submit">
+ </form>
+</h2>
+</body>
+</html>
